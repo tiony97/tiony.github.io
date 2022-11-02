@@ -1,0 +1,242 @@
+$lightFont: #FCF0EC;
+$darkFont: #000000;
+$accent: #EF3C3C;
+
+$textFont: 19.2px;
+$bigHeadingFont: 89.505px;
+$smallHeadingFont: 36.465px;
+
+@font-face {
+    font-family: headingFontStyle;
+    src: url(../Fonts/GT-Pressura-Regular.otf);
+}
+@font-face {
+    font-family: textFontStyle;
+    src: url(../Fonts/Aceh-Light.ttf);
+}
+
+@keyframes rotateMe {
+    0% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0deg);        
+    }
+}
+
+//Global Styles
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    transition: overflow ease-in-out .3s;
+}
+body{
+    background: $lightFont;
+}
+::-webkit-scrollbar {
+    //display: none;
+    width: 10px;
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    height: 10px !important;
+    background: $darkFont;
+}
+
+h1 {
+    font-family: headingFontStyle;
+    //font-size: $bigHeadingFont;
+    line-height: 89.505px;
+}
+h4 {
+    font-family: headingFontStyle;
+    //font-size: $smallHeadingFont;
+    line-height: 43.758px;
+}
+p,a {
+    font-family: textFontStyle;
+    //font-size: $textFont;
+    line-height: 28.8px;
+}
+.activeLink {
+    color: $lightFont;
+} 
+
+//Overlay Navigation
+#overlayNav {
+    background: $accent;
+    color: $darkFont;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    z-index: 50;
+    opacity: 0;
+    display: none;
+    .navLinks {
+        font-family: headingFontStyle;
+        //font-size: $bigHeadingFont;
+        transition: all ease-in-out .5s;
+        &:hover {
+            color: $lightFont;
+        }
+    }
+    .socialIcons {
+        a{
+            transition: all ease-in-out .5s;
+            &:hover {
+                color: $lightFont;
+            } 
+        }
+    }
+}
+
+//Header
+#header {
+    background: transparent;
+    color: $darkFont;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    
+    .menu {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        padding: 0;
+        border-radius: 50%;
+        transition: all .8s ease-in-out;
+        &:hover {
+            background: $lightFont;
+            .line {
+                stroke: $darkFont;
+            }
+            .line1 {
+                stroke-dasharray: 40 207;
+            }
+            .line3 {
+                stroke-dasharray: 40 207;
+            }
+        }
+    }
+    .line {
+        fill: none;
+        stroke: $darkFont;
+        stroke-width: 6;
+        transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+            stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    .line1 {
+        stroke-dasharray: 60 207;
+        stroke-width: 2;
+    }
+    .line2 {
+        stroke-dasharray: 60 60;
+        stroke-width: 2;
+    }
+    .line3 {
+        stroke-dasharray: 60 207;
+        stroke-width: 2;
+    }
+    .menu .opened {
+        border: 2px solid $darkFont;
+    }
+    .opened .line {
+        stroke: $darkFont;
+    }
+    .opened .line1 {
+        stroke-dasharray: 90 207;
+        stroke-dashoffset: -134;
+        stroke-width: 2;
+    }
+    .opened .line2 {
+        stroke-dasharray: 1 60;
+        stroke-dashoffset: -30;
+        stroke-width: 2;
+    }
+    .opened .line3 {
+        stroke-dasharray: 90 207;
+        stroke-dashoffset: -134;
+        stroke-width: 2;
+    }
+}
+
+//Landing section
+#landing {
+    color: $darkFont;
+    min-height: 100vh;
+    h1 {
+        color: $accent;
+        font-size: 13em;
+        z-index: 5;
+    }
+        
+    .img-1 {
+        top: 10%;
+        left: 35%;
+        position: absolute;
+        height: 500px;
+        transform: rotate(-40deg);
+    }
+    .img-2 {
+        top: 50%;
+        left: 20%;
+        position: absolute;
+        height: 500px;
+        transform: rotate(80deg);
+    }
+    .extra {
+        z-index: 5 !important;
+        a {
+            transition: all ease-in-out .5s;
+            &:hover {
+                color: $accent;
+            }
+        }
+    }
+}
+
+#skills {
+    color: $darkFont;
+    min-height: 100vh;
+    
+}
+
+#works {
+    color: $darkFont;
+    min-height: 100vh;
+    border-top: 1px solid rgb(172, 172, 172);
+    border-bottom: 1px solid rgb(172, 172, 172);
+    .work {
+        z-index: 10;
+        img {
+            width:70vw;
+            height: 80vh;
+            object-fit: contain;
+        }
+    }
+}
+
+#footer {
+    z-index: 50;
+    color: $darkFont;
+    .mqWrapper {
+        min-height: 50vh;
+    }
+    p,a {
+        font-family: $textFont;
+        //text-transform: uppercase;
+    }
+    .footerBar {
+        border-top: 1px solid $lightFont;
+        min-height: 10vh;
+    }
+}

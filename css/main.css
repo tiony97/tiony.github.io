@@ -1,0 +1,279 @@
+@font-face {
+  font-family: headingFontStyle;
+  src: url(../Fonts/GT-Pressura-Regular.otf);
+}
+
+@font-face {
+  font-family: textFontStyle;
+  src: url(../Fonts/Aceh-Light.ttf);
+}
+
+@-webkit-keyframes rotateMe {
+  0% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes rotateMe {
+  0% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  -webkit-transition: overflow ease-in-out .3s;
+  transition: overflow ease-in-out .3s;
+}
+
+body {
+  background: #FCF0EC;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  height: 10px !important;
+  background: #000000;
+}
+
+h1 {
+  font-family: headingFontStyle;
+  line-height: 89.505px;
+}
+
+h4 {
+  font-family: headingFontStyle;
+  line-height: 43.758px;
+}
+
+p, a {
+  font-family: textFontStyle;
+  line-height: 28.8px;
+}
+
+.activeLink {
+  color: #FCF0EC;
+}
+
+#overlayNav {
+  background: #EF3C3C;
+  color: #000000;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  z-index: 50;
+  opacity: 0;
+  display: none;
+}
+
+#overlayNav .navLinks {
+  font-family: headingFontStyle;
+  -webkit-transition: all ease-in-out .5s;
+  transition: all ease-in-out .5s;
+}
+
+#overlayNav .navLinks:hover {
+  color: #FCF0EC;
+}
+
+#overlayNav .socialIcons a {
+  -webkit-transition: all ease-in-out .5s;
+  transition: all ease-in-out .5s;
+}
+
+#overlayNav .socialIcons a:hover {
+  color: #FCF0EC;
+}
+
+#header {
+  background: transparent;
+  color: #000000;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 100;
+}
+
+#header .menu {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  border-radius: 50%;
+  -webkit-transition: all .8s ease-in-out;
+  transition: all .8s ease-in-out;
+}
+
+#header .menu:hover {
+  background: #FCF0EC;
+}
+
+#header .menu:hover .line {
+  stroke: #000000;
+}
+
+#header .menu:hover .line1 {
+  stroke-dasharray: 40 207;
+}
+
+#header .menu:hover .line3 {
+  stroke-dasharray: 40 207;
+}
+
+#header .line {
+  fill: none;
+  stroke: #000000;
+  stroke-width: 6;
+  -webkit-transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1), stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1), stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#header .line1 {
+  stroke-dasharray: 60 207;
+  stroke-width: 2;
+}
+
+#header .line2 {
+  stroke-dasharray: 60 60;
+  stroke-width: 2;
+}
+
+#header .line3 {
+  stroke-dasharray: 60 207;
+  stroke-width: 2;
+}
+
+#header .menu .opened {
+  border: 2px solid #000000;
+}
+
+#header .opened .line {
+  stroke: #000000;
+}
+
+#header .opened .line1 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 2;
+}
+
+#header .opened .line2 {
+  stroke-dasharray: 1 60;
+  stroke-dashoffset: -30;
+  stroke-width: 2;
+}
+
+#header .opened .line3 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 2;
+}
+
+#landing {
+  color: #000000;
+  min-height: 100vh;
+}
+
+#landing h1 {
+  color: #EF3C3C;
+  font-size: 13em;
+  z-index: 5;
+}
+
+#landing .img-1 {
+  top: 10%;
+  left: 35%;
+  position: absolute;
+  height: 500px;
+  -webkit-transform: rotate(-40deg);
+          transform: rotate(-40deg);
+}
+
+#landing .img-2 {
+  top: 50%;
+  left: 20%;
+  position: absolute;
+  height: 500px;
+  -webkit-transform: rotate(80deg);
+          transform: rotate(80deg);
+}
+
+#landing .extra {
+  z-index: 5 !important;
+}
+
+#landing .extra a {
+  -webkit-transition: all ease-in-out .5s;
+  transition: all ease-in-out .5s;
+}
+
+#landing .extra a:hover {
+  color: #EF3C3C;
+}
+
+#skills {
+  color: #000000;
+  min-height: 100vh;
+}
+
+#works {
+  color: #000000;
+  min-height: 100vh;
+  border-top: 1px solid #acacac;
+  border-bottom: 1px solid #acacac;
+}
+
+#works .work {
+  z-index: 10;
+}
+
+#works .work img {
+  width: 70vw;
+  height: 80vh;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+#footer {
+  z-index: 50;
+  color: #000000;
+}
+
+#footer .mqWrapper {
+  min-height: 50vh;
+}
+
+#footer p, #footer a {
+  font-family: 19.2px;
+}
+
+#footer .footerBar {
+  border-top: 1px solid #FCF0EC;
+  min-height: 10vh;
+}
+/*# sourceMappingURL=main.css.map */
